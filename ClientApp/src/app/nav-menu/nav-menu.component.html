@@ -1,44 +1,25 @@
-<header>
-  <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
-  >
-    <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']">ManageShopSystem</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-        aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded"
-        (click)="toggle()"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
-        [ngClass]="{ show: isExpanded }"
-      >
-        <ul class="navbar-nav flex-grow">
-          <li
-            class="nav-item"
-            [routerLinkActive]="['link-active']"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <a class="nav-link text-dark" [routerLink]="['/']">Home</a>
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/counter']"
-              >Counter</a
-            >
-          </li>
-          <li class="nav-item" [routerLinkActive]="['link-active']">
-            <a class="nav-link text-dark" [routerLink]="['/fetch-data']"
-              >Fetch data</a
-            >
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+<div class="sidenav" [class.open]="isSidebarOpen">
+  <a href="javascript:void(0)" class="closebtn" (click)="toggleSidebar()">&times;</a>
+
+  <a routerLink="/home-page" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/shops" routerLinkActive="active" (click)="toggleShopMenu()">
+    Shops
+    <span class="arrow" [class.open]="isShopMenuOpen">&#9662;</span> <!-- Dropdown arrow -->
+  </a>
+  <div *ngIf="isShopMenuOpen" class="submenu">
+    <a routerLink="/shops/add" routerLinkActive="active">Add Shop</a>
+    <a routerLink="/shops/view" routerLinkActive="active">View Shops</a>
+  </div>
+  <a routerLink="/orders" routerLinkActive="active">Orders</a>
+  <a routerLink="/products" routerLinkActive="active">Products</a>
+  <a routerLink="/customers" routerLinkActive="active">Customers</a>
+  <a routerLink="/contact-us" routerLinkActive="active">Contact us</a>
+  <a routerLink="/settings" routerLinkActive="active">Settings</a>
+
+</div>
+
+<!-- Main content -->
+<div id="main-content" [class.sidenav-open]="isSidebarOpen">
+  <button *ngIf="!isSidebarOpen"  class="openbtn" (click)="toggleSidebar()">&#9776;</button>
+  <router-outlet></router-outlet>
+</div>

@@ -1,18 +1,95 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/* Sticky Sidebar Styles */
+.sidenav {
+  position: fixed; /* Make the sidebar sticky */
+  height: 100%;
+  width: 0; /* Start hidden */
+  top: 0;
+  left: 0;
+  background-color: #2c3e50; /* Darker background color */
+  overflow-x: hidden;
+  transition: width 0.5s ease; /* Smooth opening */
+  padding-top: 60px;
+  z-index: 1000; /* Ensure sidebar is always on top */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
+  .sidenav.open {
+    width: 250px; /* Width when opened */
   }
+
+.sidenav-title {
+  color: #ecf0f1; /* Light color for title */
+  text-align: center;
+  margin-bottom: 20px; /* Space below the title */
+  font-size: 24px;
+  font-family: 'Arial', sans-serif; /* Font style */
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.sidenav a {
+  padding: 15px 20px; /* Increased padding for clickable area */
+  text-decoration: none;
+  font-size: 18px; /* Smaller font size for better fit */
+  color: #ecf0f1; /* Light color for links */
+  display: block;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+  border-radius: 4px; /* Rounded corners */
+}
+
+  .sidenav a:hover {
+    background-color: #34495e; /* Darker background on hover */
+    color: #ffffff; /* White text on hover */
+  }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 15px; /* Adjusted to fit better */
+  right: 25px;
+  font-size: 30px;
+  color: #ecf0f1; /* Light color for close button */
+}
+.submenu {
+  padding-left: 20px;
+}
+
+  .submenu a {
+    font-size: 14px; /* Smaller font for submenu */
+  }
+/* Main content */
+#main-content {
+  transition: margin-left 0.5s, padding 0.5s; /* Smooth transition */
+  padding: 0;
+  margin-left: 0;
+}
+
+  #main-content.sidenav-open {
+    margin-left: 250px; /* Space for the opened sidebar */
+  }
+
+/* Button to open sidebar */
+.openbtn {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: #dfe9ef00;/* Attractive button color */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  position: fixed; /* Fixed position */
+  top: 00px; /* Desired distance from the top */
+  left: 00px; /* Desired distance from the left */
+  z-index: 1000; /* Ensure button stays above other elements */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+  .openbtn:hover {
+   
+    transform: scale(1.05); /* Slight scaling effect on hover */
+  }
+
+/* Ensure that content scrolls independently of the sidebar */
+#main-content {
+  margin-left: 0;
+  overflow: auto;
+  height: 100vh; /* Full height */
 }

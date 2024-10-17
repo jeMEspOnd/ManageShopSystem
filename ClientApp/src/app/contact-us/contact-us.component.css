@@ -1,0 +1,29 @@
+.design {
+  background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0'); /* Change to your desired background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.container-fluid {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.contact-form {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* Footer styles */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
