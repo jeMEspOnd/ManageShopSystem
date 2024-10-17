@@ -1,0 +1,42 @@
+.about-us {
+  background: #4f365ca1; /* Update with your image path */
+  background-size: cover;
+  color: white; /* Ensure text is readable on the background */
+  padding: 100px 0; /* Vertical padding */
+}
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.value-item {
+  margin: 10px 0; /* Space between items */
+}
+
+.footer {
+  background-color: #343a40; /* Dark footer for contrast */
+  padding: 20px 0;
+  text-align: center;
+}
+
+  .footer a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+    .footer a:hover {
+      text-decoration: underline; /* Underline effect on hover */
+    }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 50px 15px; /* Adjust padding for smaller screens */
+  }
+}
