@@ -3,8 +3,8 @@
   position: fixed; /* Make the sidebar sticky */
   height: 100%;
   width: 0; /* Start hidden */
-  top: 0;
-  left: 0;
+  top: 2px;
+  left: 2px;
   background-color: #2c3e50; /* Darker background color */
   overflow-x: hidden;
   transition: width 0.5s ease; /* Smooth opening */

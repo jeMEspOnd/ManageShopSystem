@@ -1,7 +1,7 @@
 <div class="sidenav" [class.open]="isSidebarOpen">
   <a href="javascript:void(0)" class="closebtn" (click)="toggleSidebar()">&times;</a>
 
-  <a routerLink="/home-page" routerLinkActive="active">Dashboard</a>
+  <a routerLink="/" routerLinkActive="active">Dashboard</a>
   <a routerLink="/shops" routerLinkActive="active" (click)="toggleShopMenu()">
     Shops
     <span class="arrow" [class.open]="isShopMenuOpen">&#9662;</span> <!-- Dropdown arrow -->
