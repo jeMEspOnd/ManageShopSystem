@@ -132,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "ManageShopSystem"
+  "defaultProject": "ManageShopSystem",
+  "cli": {
+    "analytics": "67c0e458-a9e3-45b4-8595-8698866a83fd"
+  }
 }
